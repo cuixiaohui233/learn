@@ -28,15 +28,16 @@
     `const imgs = imgURL.keys.map(imgURL);`<br/>
 
   第三步：
-    循环遍历这个存放所有图片的数组，判断json中的图片名称是否与之匹配，如果匹配成功，则将图片地址赋值给 <img> 的 url
-    `let img = '';`<br/>
-    `imgs.forEach(function(e){`<br/>
-       `if(e.indexOf(json.img) > 0){`<br/>
-         `img = e;`<br/>
-       `}`<br/>
-      `});`<br/>
+    循环遍历这个存放所有图片的数组，判断json中的图片名称是否与之匹配，如果匹配成功，则将图片地址赋值给 `<img>` 的 url    
+    `let img = '';
+    imgs.forEach(function(e){
+       if(e.indexOf(json.img) > 0){
+         img = e;
+       }
+      });`
     ...<br/>
     ...<br/>
+
     `<img src={img} />`<br/>
 
 综上，就可以完成 img 标签动态添加图片地址的代码了。
