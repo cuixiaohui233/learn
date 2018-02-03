@@ -1,14 +1,14 @@
 # 关于react引入图片的总结：
 ### 1.通过 import 的方法：
 
-  `import imgURL from '../image/xxx.png';`
+  `import imgURL from '../image/xxx.png';`<br/>
   ...<br/>
   ...<br/>
   `<img src={imgURL} />`
 
 ### 2.通过 require 的方法：
 
-  `let img = require('../image/xxx.png');`
+  `let img = require('../image/xxx.png');`<br/>
   ...<br/>
   ...<br/>
   `<img src={img} />`
@@ -17,7 +17,9 @@
 
   需要注意：
   以上两种方式存在弊端：
+
   1.require 只可以写字符串，不可以写变量；
+
   2.只适用于图片较少的方式，如果图片是存在一个 json 文件中廷议管理的化，推荐使用（也只有这种方式）以下方法：
 
 ### 3.使用 require.context 的方法： <br/>
@@ -40,8 +42,8 @@
        }
       });`
 
-    ...<br/>
-    ...<br/>
+    `...`<br/>
+    `...`<br/>
 
     `<img src={img} />`<br/>
 
