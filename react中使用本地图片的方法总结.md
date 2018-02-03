@@ -1,13 +1,11 @@
 # 关于react引入图片的总结：
 ### 1.通过 import 的方法：
-
    import imgURL from '../image/xxx.png'; <br/>
   ...<br/>
   ...<br/>
-   <img src={imgURL} />
+  ` <img src={imgURL} />`
 
 ### 2.通过 require 的方法：
-
    let img = require('../image/xxx.png'); <br/>
   ...<br/>
   ...
