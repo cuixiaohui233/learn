@@ -2,12 +2,12 @@
 ### 1.通过 import 的方法：
 
    import imgURL from '../image/xxx.png'; <br/>
-   <img src={imgURL} />
+   `<img src={imgURL} />`
 
 ### 2.通过 require 的方法：
 
    let img = require('../image/xxx.png'); <br/>
-   <img src={img} />
+   `<img src={img} />`
 
   或者：
 
@@ -29,7 +29,7 @@
 
   第二步：
 
-    const imgs = imgURL.keys.map(imgURL);
+    const imgs = imgURL.keys().map(imgURL);
 
   第三步：循环遍历这个存放所有图片的数组，判断json中的图片名称是否与之匹配，如果匹配成功，则将图片地址赋值给  <img>  的 url    
 
