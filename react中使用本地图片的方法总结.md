@@ -18,23 +18,26 @@
   2.只适用于图片较少的方式，如果图片是存在一个 json 文件中廷议管理的化，推荐使用（也只有这种方式）以下方法：
 ### 3.使用 require.context 的方法： <br/>
   第一步：通过 require.context 从存放图片的文件夹中引入所有文件：
-    `const imgURL = require.context('../image',true,/^\.\/.*\.png$/)`
 
-    <br/>
+    `const imgURL = require.context('../image',true,/^\.\/.*\.png$/)`
 
     (这里简单介绍一下 require.context 的参数，第一个参数是图片存放的相对路径地址，第二个参数是是否查找子文件夹，第三个参数是匹配图片的正则表达式)
 
   第二步：
-    `const imgs = imgURL.keys.map(imgURL);`<br/>
+
+    `const imgs = imgURL.keys.map(imgURL);`
 
   第三步：
+  
     循环遍历这个存放所有图片的数组，判断json中的图片名称是否与之匹配，如果匹配成功，则将图片地址赋值给 `<img>` 的 url    
+
     `let img = '';
     imgs.forEach(function(e){
        if(e.indexOf(json.img) > 0){
          img = e;
        }
       });`
+
     ...<br/>
     ...<br/>
 
